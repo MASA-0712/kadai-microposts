@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end 
   end
   
-  resources :microposts, only: [:create, :destroy, :show] do
+  resources :microposts, only: [:create, :destroy] do
     member do
       post :favorites, to: 'favorites#create'
       delete :unfavorites, to: 'favorites#destroy'
